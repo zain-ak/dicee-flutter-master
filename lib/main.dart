@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'dart:ui' as prefix0;
 
 import 'package:flutter/material.dart';
 
@@ -19,10 +20,6 @@ void main() {
   );
 }
 
-int imgIndex() {
-  return Random().nextInt(6);
-}
-
 class DicePage extends StatefulWidget {
 
   @override
@@ -34,8 +31,8 @@ class _DicePageState extends State<DicePage> {
   int _right = 1;
 
   void indexUpdate() {
-    _left = imgIndex()+1;
-    _right = imgIndex()+1;
+    _left = Random().nextInt(6) + 1;
+    _right = Random().nextInt(6) + 1;
   }
 
   @override
